@@ -10,10 +10,10 @@ const io = new Server(server);
 const PORT = process.env.PORT || 5000;
 const userSocketMap = {};
 
-app.use(express.static("build"));
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+// app.use(express.static("build"));
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
 const getAllClients = (roomID) => {
   //return a socketid array without map fxn
   return Array.from(io.sockets.adapter.rooms.get(roomID) || []).map(
@@ -41,12 +41,13 @@ io.on("connection", (socket) => {
     });
   });
 
+
   socket.on(ACTIONS.CODE_CHANGE, ({ roomID, code }) => {
     socket.in(roomID).emit(ACTIONS.CODE_CHANGE, { code });
   });
   socket.on(ACTIONS.SYNC_CODE, ({ socketId, code }) => {
     io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code });
-});
+  });
   socket.on("disconnecting", () => {
     const rooms = [...socket.rooms];
     rooms.forEach((roomID) => {

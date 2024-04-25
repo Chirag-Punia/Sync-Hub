@@ -8,6 +8,7 @@ import "codemirror/addon/edit/closebrackets";
 import "../pages/styles/Editor.css";
 import ACTIONS from "../Actions";
 
+
 const Editor = ({ socketRef, roomID, onCodeChange }) => {
   console.log(socketRef.current);
   const editorRef = useRef(null);
@@ -58,6 +59,7 @@ const Editor = ({ socketRef, roomID, onCodeChange }) => {
   return (
     <>
       <textarea id="realTimeEditor" />
+
     </>
   );
 };
