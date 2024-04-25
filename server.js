@@ -10,10 +10,10 @@ const io = new Server(server);
 const PORT = process.env.PORT || 5000;
 const userSocketMap = {};
 
-// app.use(express.static("build"));
-// app.use((req, res, next) => {
-//   res.sendFile(path.join(__dirname, "build", "index.html"));
-// });
+app.use(express.static("build"));
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 const getAllClients = (roomID) => {
   //return a socketid array without map fxn
   return Array.from(io.sockets.adapter.rooms.get(roomID) || []).map(
