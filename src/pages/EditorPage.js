@@ -228,7 +228,7 @@ const EditorPage = () => {
           <div className="outputWrap"></div>
           <input
             className="stdinput"
-            placeholder="sdt:input"
+            placeholder="std:input"
             onChange={(e) => {
               setInp(e.target.value);
             }}
