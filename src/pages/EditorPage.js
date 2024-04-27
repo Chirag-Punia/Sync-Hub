@@ -203,9 +203,11 @@ const EditorPage = () => {
                     setLanguage(e.target.value);
                   }}
                 >
-                  <option value="54" selected="selected">
-                    C++
-                  </option>
+
+                  
+
+                  <option value="54" selected="selected">C++</option>
+
                   <option value="50">C</option>
                   <option value="71">Python</option>
                 </select>
