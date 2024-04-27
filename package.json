@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5",
+    "tsc": "^2.0.4",
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -26,7 +27,8 @@
     "server:dev": "nodemon server.js",
     "server:prod": "node server.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tsc":"tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@types/codemirror": "^5.60.15"
+    "@types/codemirror": "^5.60.15",
+    "typescript": "^5.4.5"
   }
 }

@@ -199,12 +199,13 @@ const EditorPage = () => {
               <div className="custom-select ">
                 <select
                   id="tags"
-                  value={54}
                   onChange={(e) => {
                     setLanguage(e.target.value);
                   }}
                 >
-                  <option value="54">C++</option>
+                  <option value="54" selected="selected">
+                    C++
+                  </option>
                   <option value="50">C</option>
                   <option value="71">Python</option>
                 </select>
