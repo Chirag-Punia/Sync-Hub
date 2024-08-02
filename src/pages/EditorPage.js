@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from "react";
 import "./styles/EditorPage.css";
 import Client from "../components/Client";
@@ -19,12 +20,13 @@ const EditorPage = () => {
     const [clients, setClients] = useState([]);
     async function handleCompileAndOpenNewWindow() {
       const outputData = await Submit();
+      console.log(outputData);
       const newWindow = window.open("", "_blank");
 
       if (newWindow) {
         console.log(outputData);
-        newWindow.onload = () => {
-          newWindow.document.write(`<html>
+        newWindow.document.open();
+        newWindow.document.write(`<html>
           <head>
               <title>Compilation Output</title>
               <style>
@@ -46,9 +48,8 @@ const EditorPage = () => {
               <h1>Compilation Output:</h1>
               <p>${outputData}</p>
           </body>
-      </html>
-  `);
-        };
+      </html>`);
+        newWindow.document.close();
       } else {
         toast.error("Failed to open new window");
       }
@@ -126,7 +127,7 @@ const EditorPage = () => {
             headers: {
               "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
               "x-rapidapi-key":
-                "3d687c483fmshb84247eddfd7901p1cd102jsn60fa170af603",
+                "fdf077820dmsh807553b71e2591ap14f2bfjsn1eb032201f38",
               "content-type": "application/json",
               accept: "application/json",
             },
@@ -156,7 +157,7 @@ const EditorPage = () => {
               headers: {
                 "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
                 "x-rapidapi-key":
-                  "3d687c483fmshb84247eddfd7901p1cd102jsn60fa170af603",
+                  "fdf077820dmsh807553b71e2591ap14f2bfjsn1eb032201f38",
                 "content-type": "application/json",
               },
             });
@@ -203,7 +204,9 @@ const EditorPage = () => {
                     setLanguage(e.target.value);
                   }}
                 >
-                  <option value="54" selected="selected">C++</option>
+                  <option value="54" selected="selected">
+                    C++
+                  </option>
                   <option value="50">C</option>
                   <option value="71">Python</option>
                 </select>
@@ -239,3 +242,4 @@ const EditorPage = () => {
 };
 
 export default EditorPage;
+
