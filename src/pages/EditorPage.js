@@ -157,7 +157,7 @@ const EditorPage = () => {
               headers: {
                 "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
                 "x-rapidapi-key":
-                  process.env.key,
+                  process.env.KEY,
                 "content-type": "application/json",
               },
             });
