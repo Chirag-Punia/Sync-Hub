@@ -127,7 +127,7 @@ const EditorPage = () => {
             headers: {
               "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
               "x-rapidapi-key":
-                process.env.KEY,
+                "fdf077820dmsh807553b71e2591ap14f2bfjsn1eb032201f38",
               "content-type": "application/json",
               accept: "application/json",
             },
@@ -157,7 +157,7 @@ const EditorPage = () => {
               headers: {
                 "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
                 "x-rapidapi-key":
-                  process.env.KEY,
+                  "fdf077820dmsh807553b71e2591ap14f2bfjsn1eb032201f38",
                 "content-type": "application/json",
               },
             });
