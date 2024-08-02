@@ -1,11 +1,12 @@
 .mainWrap{
     display: grid;
     grid-template-columns: 230px 1fr;
-    height: 100vh;
+    height: calc(100vh - 16px);
 }
 
 .aside{
     background: black;
+    height: 102%;
     padding: 16px;
     color:white;
     display: flex;
@@ -41,8 +42,60 @@
 
 .leaveBtn{
     margin-top: 20px;
+    padding: 35px;
     background: #37B5B6;
     width: 100%;
     margin-left: auto;
 }
 
+.leaveBtn:hover{
+    background: #045252;
+}
+
+.compile-btn {
+    background: #37b5b6;
+    margin-left: 70vh;
+    margin-bottom: 20px;
+    align-self: center; 
+    color: white;
+    font-weight: 800;
+    
+  }
+  .compile-btn:hover{
+    background: #045252;
+  }
+
+  #tags {
+    width: 100px; 
+    padding: 9px; 
+    border:none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    background-color: #37b5b6;
+    color: white;
+    font-weight: 800;
+
+  }
+  
+
+  #tags option {
+    font-size: 14px; 
+  }
+
+.temp{
+    display: flex;
+}
+
+.stdinput{
+    gap : 0;
+    width:99.8%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none
+}
+.stdinput::placeholder {
+    color: #999;
+  }
