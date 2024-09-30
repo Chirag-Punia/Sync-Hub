@@ -84,3 +84,11 @@ footer{
     color: #164863;
     border-color: #164863;
 }
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 10px;
+  }
+  
