@@ -67,8 +67,8 @@ const Home = () => {
               setUserName(e.target.value);
             }}
           />
-
-          {/* Conditionally render the spinner or the JOIN button */}
+ 
+          {}
           {loading ? (
             <div className="spinner">
               <ClipLoader color={"#37B5B6"} loading={loading} size={30} />
